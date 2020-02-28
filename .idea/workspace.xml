@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2582678-1eae-4c81-bd15-bcaec24e0f25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java Course VS/com/company/GenerateCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Course VS/com/company/GenerateCalendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java Course VS/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Course VS/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GenerateCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GenerateCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/dates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +129,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582760326430" />
+    <state x="492" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582887676039">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582887676039" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1582619947408">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -38,10 +38,22 @@ public class Main {
         Scanner input = new Scanner(System.in);
         switch (choice) {
             case 1:
-                checkingCorrectnessOfDate(checkedDate);
+                System.out.println("Input the date in format d m y");
+                int day = input.nextInt();
+                int month = input.nextInt();
+                int year = input.nextInt();
+                if (checkingCorrectnessOfDate(day, month, year)) {
+                    System.out.println("Correct date");
+                } else System.out.println("Incorrect date");
                 break;
             case 2:
-                displayingDateInChosenFormat(d, m, y);
+                System.out.print("Input the date");
+                day = input.nextInt();
+                month = input.nextInt();
+                year = input.nextInt();
+                if (checkingCorrectnessOfDate(day, month, year)) {
+                    displayingDateInChosenFormat(day, month, year);
+                } else System.out.println("The date is incorrect");
                 break;
             case 3:
                 break;
@@ -77,12 +89,9 @@ public class Main {
         }
     }
 
-    public static boolean checkingCorrectnessOfDate(boolean checkedDate) {
-        Scanner input = new Scanner(System.in);
+    public static boolean checkingCorrectnessOfDate(int day, int month, int year) {
         System.out.println("Input the date in format dd mm yyyy ");
-        int day = input.nextInt();
-        int month = input.nextInt();
-        int year = input.nextInt();
+        boolean checkedDate = false;
         switch (month) {
             case 1:
             case 3:
@@ -100,80 +109,164 @@ public class Main {
             case 9:
             case 11:
                 if (day > 0 && day < 31) {
-                    System.out.println("correct date");
-                } else System.out.println("incorrect date");
+                    checkedDate = true;
+                }
                 break;
             case 2:
                 if (day > 0 && day < 29) {
-                    System.out.println("correct date");
+                    checkedDate = true;
                 } else if (day == 29 && year % 4 == 0) {
-                    System.out.println("correct date");
-                } else System.out.println("incorrect date");
+                    checkedDate = true;
+                }
                 break;
             default:
-                checkedDate
+                checkedDate = false;
         }
 
-
+        return checkedDate;
     }
 
-    public static void displayingDateInChosenFormat(int d, int m, int y) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input the date");
-        d = input.nextInt();
-        m = input.nextInt();
-        y = input.nextInt();
+    public static void displayingDateInChosenFormat(int day, int month, int year) {
         System.out.println("Choose format: \n" +
                 " 1)dd/MM/yyyy \n" +
                 " 2)MM/dd/yyyy \n" +
                 " 3)dd-MMM-yyyy ");
-        int formatDate = input.nextInt();
         String formattedDate = null;
-        switch (formatDate) {
+        switch (month) {
             case 1:
-                switch (m) {
-                    case 1:
-                    case 3:
-                    case 5:
-                    case 7:
-                    case 8:
-                        if (d > 0 && d < 10) {
-                            formattedDate = "0" + d + "/0" + m + "/" + y;
-                        } else formattedDate= d + "/0" + m + "/" + y;
-                    case 10:
-                    case 12:
-                        if (d > 0 && d < 10) {
-                            formattedDate = "0" + d + "/" + m + "/" + y;
-                        } else formattedDate = d + "/" + m + "/" + y;
-
+                if (month < 10) {
+                    if (day < 10) {
+                        formattedDate = "0" + day + "/0" + month + year;
+                    } else if (day > 10) {
+                        formattedDate = day + "/0" + month + year;
+                    }
+                    if (month > 10) {
+                        if (day < 10) {
+                            formattedDate = "0" + day + "/" + month + year;
+                        } else if (day > 10) {
+                            formattedDate = day + "/" + month + year;
+                        }
+                    }
                 }
-                System.out.println(formattedDate);
                 break;
             case 2:
-                switch (m) {
-                    case 1:
-                    case 3:
-                    case 5:
-                    case 7:
-                    case 8:
-                        if (d > 0 && d < 10) {
-                            formattedDate = "0" + d + "/0" + m + "/" + y;
-                        } else formattedDate = d + "/0" + m + "/" + y;
-                    case 10:
-                    case 12:
-                        if (d > 0 && d < 10) {
-                            formattedDate = "0" + d + "/" + m + "/" + y;
-                        } else formattedDate = d + "/" + m + "/" + y;
-                    case 2:
-                        if (d > 0)
-
+                if (month < 10) {
+                    if (day < 10) {
+                        formattedDate = "0" + month + "/0" + day + year;
+                    } else if (day > 10) {
+                        formattedDate = "/0" + month + "/" + day + year;
+                    }
+                    if (month > 10) {
+                        if (day < 10) {
+                            formattedDate = month + "/0" + day + "/" + +year;
+                        } else if (day > 10) {
+                            formattedDate = month + "/" + day + year;
+                        }
+                    }
                 }
-                System.out.println(formattedDate);
                 break;
             case 3:
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + formatDate);
+                switch (month) {
+                    case 1:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Jan" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Jan" + "-" + year;
+                        }
+                        break;
+                    case 2:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Feb" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Feb" + "-" + year;
+                        }
+                        break;
+                    case 3:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Mar" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Mar" + "-" + year;
+                        }
+                        break;
+                    case 4:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Apr" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Apr" + "-" + year;
+                        }
+                        break;
+                    case 5:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "May" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "May" + "-" + year;
+                        }
+                        break;
+                    case 6:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Jun" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Jun" + "-" + year;
+                        }
+                        break;
+                    case 7:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Jul" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Jul" + "-" + year;
+                        }
+                        break;
+                    case 8:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Aug" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Aug" + "-" + year;
+                        }
+                        break;
+                    case 9:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Sep" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Sep" + "-" + year;
+                        }
+                        break;
+                    case 10:
+                        if (day < 10) {
+                            formattedDate = "0" + day + "-" + "Oct" + "-" + year;
+                        }
+                        if (day > 10) {
+                            formattedDate = day + "-" + "Oct" + "-" + year;
+                            break;
+                            case 11:
+                                if (day < 10) {
+                                    formattedDate = "0" + day + "-" + "Nov" + "-" + year;
+                                }
+                                if (day > 10) {
+                                    formattedDate = day + "-" + "Nov" + "-" + year;
+                                }
+                                break;
+                            case 12:
+                                if (day < 10) {
+                                    formattedDate = "0" + day + "-" + "Dec" + "-" + year;
+                                }
+                                if (day > 10) {
+                                    formattedDate = day + "-" + "Dec" + "-" + year;
+                                }
+                                break;
+                        }
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value");
+                }
         }
     }
 }

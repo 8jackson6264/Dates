@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2582678-1eae-4c81-bd15-bcaec24e0f25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,9 +85,25 @@
       <option name="presentableId" value="Default" />
       <updated>1582105698793</updated>
     </task>
+    <task id="LOCAL-00001" summary="DisplayingDateTry1">
+      <created>1582891131243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582891131243</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DisplayingDateTry1" />
+    <option name="LAST_COMMIT_MESSAGE" value="DisplayingDateTry1" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="300" y="0" key="CommitChangelistDialog2" timestamp="1582891123262">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="300" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582891123262" />
     <state width="1322" height="216" key="GridCell.Tab.0.bottom" timestamp="1582816863769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

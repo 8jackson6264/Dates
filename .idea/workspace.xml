@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2582678-1eae-4c81-bd15-bcaec24e0f25" name="Default Changelist" comment="" />
+    <list default="true" id="c2582678-1eae-4c81-bd15-bcaec24e0f25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java Course VS/com/company/GenerateCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Course VS/com/company/GenerateCalendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java Course VS/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Course VS/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GenerateCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GenerateCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/dates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ClearCode" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y1MYzdDzPyVY82iDN7IAgtAvdB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,7 +36,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Application.GenerateCalendar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GenerateCalendar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.GenerateCalendar" />
       <module name="Java Course VS" />
@@ -44,7 +51,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.dates" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Java Course VS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -55,8 +62,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenerateCalendar" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GenerateCalendar" />
       </list>
     </recent_temporary>
   </component>
@@ -86,30 +93,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1306" height="169" key="GridCell.Tab.0.bottom" timestamp="1582637549676">
+    <state width="1322" height="216" key="GridCell.Tab.0.bottom" timestamp="1582816863769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="169" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582637549676" />
-    <state width="1306" height="169" key="GridCell.Tab.0.center" timestamp="1582637549676">
+    <state width="1322" height="216" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.0.center" timestamp="1582816863769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="169" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582637549676" />
-    <state width="1306" height="169" key="GridCell.Tab.0.left" timestamp="1582637549676">
+    <state width="1322" height="216" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.0.left" timestamp="1582816863769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="169" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582637549676" />
-    <state width="1306" height="169" key="GridCell.Tab.0.right" timestamp="1582637549676">
+    <state width="1322" height="216" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.0.right" timestamp="1582816863769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="169" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582637549676" />
+    <state width="1322" height="216" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.1.bottom" timestamp="1582816863769">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="216" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.1.center" timestamp="1582816863769">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="216" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.1.left" timestamp="1582816863769">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="216" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
+    <state width="1322" height="216" key="GridCell.Tab.1.right" timestamp="1582816863769">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="216" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582816863769" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1582558112826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582558112826" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582706824946">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1582760326430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582706824946" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582760326430" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1582619947408">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

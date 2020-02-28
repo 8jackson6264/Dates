@@ -10,14 +10,11 @@ public class GenerateCalendar {
         for (int i = 0; i < calendar.length; i++) {
             for (int j = 0; j < calendar[i].length; j++) {
                 day = (firstDay % 7 != 0 ? firstDay % 7 : 7);
-                if (i == 1 && j == 28){
-                    calendar[i][j] = day;
+                if (i == 1 && j == 29){
                     break;
-                } else if (i<7 && i%2 == 1 && j==29){
-                    calendar[i][j] = day;
+                } else if (i<7 && i%2 == 1 && j==30){
                     break;
-                } else if (i>6 && i%2 == 0 && j == 29){
-                    calendar[i][j] = day;
+                } else if (i>6 && i%2 == 0 && j == 30){
                     break;
                 }
                 calendar[i][j] = day;

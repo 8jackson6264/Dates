@@ -6,21 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int firstJan = input.nextInt();
-        int[][] calendar = generatingCalendar(firstJan);
-
-        printCalendar(firstJan, 11, calendar);
         byte choice;
-//        while (true) {
-//            System.out.println("What day of the week is 1-st January?" + "\n" +
-//                    "Choose from 1 to 7, where 1 equals Monday and 7 equals Sunday");
-//            firstJan = input.nextInt();
-//            outputOptions();
-//            choice = input.nextByte();
-//            switchChoice(choice);
-//
-//
-//        }
+        while (true) {
+            System.out.println("What day of the week is 1-st January?" + "\n" +
+                    "Choose from 1 to 7, where 1 equals Monday and 7 equals Sunday");
+            int firstJan = input.nextInt();
+            outputOptions();
+            choice = input.nextByte();
+            switchChoice(choice, firstJan);
+
+        }
     }
 
     public static void outputOptions() {
@@ -41,7 +36,7 @@ public class Main {
         int day, month, year;
         switch (choice) {
             case 1:
-                System.out.println("Input the date in format d m y");
+                System.out.print("Input the date in format d m y: ");
                 day = input.nextInt();
                 month = input.nextInt();
                 year = input.nextInt();
@@ -50,7 +45,7 @@ public class Main {
                 } else System.out.println("Incorrect date");
                 break;
             case 2:
-                System.out.print("Input the date");
+                System.out.print("Input the date: ");
                 day = input.nextInt();
                 month = input.nextInt();
                 year = input.nextInt();
@@ -66,6 +61,11 @@ public class Main {
             case 4:
                 break;
             case 5:
+                int[][] calendar = generatingCalendar(firstJan);
+                System.out.println("For which month do you want to print a calendar? \n" +
+                        "Choose with numbers where 1 is for January and 12 is for December");
+                month = input.nextInt();
+                printCalendar(firstJan, month, calendar);
                 break;
             case 0:
                 System.exit(0);
@@ -135,7 +135,7 @@ public class Main {
 
     public static void displayDateInChosenFormat(int day, int month, int year) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Choose format: \n" +
+        System.out.println("Choose format: (1, 2, or 3)\n" +
                 " 1)dd/MM/yyyy \n" +
                 " 2)MM/dd/yyyy \n" +
                 " 3)dd-MMM-yyyy ");
@@ -221,6 +221,7 @@ public class Main {
                 }
                 System.out.print(year);
         }
+        System.out.println();
     }
 
     public static void defineDayOfWeekByDate(int day, int month, int firstJan) {
@@ -247,28 +248,37 @@ public class Main {
             case 7:
                 System.out.println("Sunday");
                 break;
+
         }
+        System.out.println();
     }
 
     public static void printCalendar(int firstJan, int month, int calendar[][]) {
-//        int help = 0;
-//        System.out.println("Mo Tu We Th Fr Sа Su");
-//        for (int k = firstJan - 1; k > 1; k--) {
-//            System.out.print("   ");
-//        }
-//        for (int i = 0; i < calendar[month - 1].length; i++) {
-//            if (i<9){
-//                System.out.print((calendar[month][i]+help) + "  ");
-//            } else {
-//                System.out.print((calendar[month][i]+help) + " ");
-//            }
-//            if(calendar[month][i] == 7){
-//                System.out.println();
-//                help +=7;
-//            }
-//        }
+        System.out.println("Mo Tu We Th Fr Sa Su");
+        int firstDay = calendar[month - 1][0];
+        int firstSunday = 8 - firstDay;
+        int day = 1;
+        for (int j = 0; j < firstDay - 1; j++) {
+            System.out.print("   ");
+        }
+        for (int i = 0; i < 31; i++) {
+
+            if (calendar[month - 1][i] == 0) {
+                break;
+            }
+            if (day < 10) {
+
+                System.out.print(" " + day + " ");
+            } else System.out.print(day + " ");
+            if ((day - firstSunday) % 7 == 0) {
+                System.out.println("");
+            }
+            day++;
+        }
+        System.out.println("");
     }
 }
+
 
 
 

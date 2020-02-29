@@ -80,8 +80,12 @@ public class Main {
     }
 
     public static int[][] generatingCalendar(int firstJan) {
+        //declaring a calendar for the whole year
+        //in this array the value of every index shows what day of the week is that day
+        //the date we get from the indexes of each element
         int[][] calendar = new int[12][31];
         int day;
+        //filling the calendar
         for (int i = 0; i < calendar.length; i++) {
             for (int j = 0; j < calendar[i].length; j++) {
                 day = (firstJan % 7 != 0 ? firstJan % 7 : 7);
@@ -110,7 +114,7 @@ public class Main {
             case 10:
             case 12:
                 if (day > 0 && day < 32) {
-                    checkedDate = true;
+                    checkedDate = true; //these days have 31 days
                 }
                 break;
             case 4:
@@ -119,14 +123,12 @@ public class Main {
             case 11:
                 if (day > 0 && day < 31) {
                     checkedDate = true;
-                }
+                }    // these days have 30 days
                 break;
             case 2:
                 if (day > 0 && day < 30) {
                     checkedDate = true;
-                } else if (day == 29) {
-                    checkedDate = true;
-                }
+                } //every year is leap
                 break;
             default:
                 checkedDate = false;
@@ -142,7 +144,7 @@ public class Main {
                 " 2)MM/dd/yyyy \n" +
                 " 3)dd-MMM-yyyy ");
         byte chosenFormat = input.nextByte();
-        String formattedDate = null;
+        String formattedDate = null; //formatting
         switch (chosenFormat) {
             case 1:
                 if (month < 10) {
@@ -228,6 +230,7 @@ public class Main {
 
     public static void defineDayOfWeekByDate(int day, int month, int firstJan) {
         int[][] year = generatingCalendar(firstJan);
+        //we just use the values of the generated calendar
         switch (year[month - 1][day - 1]) {
             case 1:
                 System.out.println("Monday");
@@ -258,7 +261,8 @@ public class Main {
     public static void printCalendar(int firstJan, int month, int calendar[][]) {
         System.out.println("Mo Tu We Th Fr Sa Su");
         int firstDay = calendar[month - 1][0];
-        int firstSunday = 8 - firstDay;
+        int firstSunday = 8 - firstDay; //we find the first Sunday;
+        //we need the first Sunday because after each Sunday there will be a new line
         int day = 1;
         for (int j = 0; j < firstDay - 1; j++) {
             System.out.print("   ");
@@ -355,11 +359,11 @@ public class Main {
                     date = i + 1;
                 }
             }
-            if(counter == dayNumber)System.out.println("dd/mm ->" + date + "/" + month);
+            if (counter == dayNumber) System.out.println("dd/mm ->" + date + "/" + month);
         } else {
             System.out.println("Wrong input!!!");
         }
-        if (counter != dayNumber) System.out.println("No such date");
+        if (counter != dayNumber) System.out.println("No such a date");
     }
 
 }

@@ -36,24 +36,24 @@ public class Main {
         int day, month, year;
         switch (choice) {
             case 1:
-                System.out.print("Input the date in format d m y: ");
+                System.out.print("Input the date in format d m: ");
                 day = input.nextInt();
                 month = input.nextInt();
-                year = input.nextInt();
-                if (checkingCorrectnessOfDate(day, month, year)) {
+                if (checkingCorrectnessOfDate(day, month)) {
                     System.out.println("Correct date");
                 } else System.out.println("Incorrect date");
                 break;
             case 2:
-                System.out.print("Input the date: ");
+                System.out.print("Input the date dd mm yyyy: ");
                 day = input.nextInt();
                 month = input.nextInt();
                 year = input.nextInt();
-                if (checkingCorrectnessOfDate(day, month, year)) {
+                if (checkingCorrectnessOfDate(day, month)) {
                     displayDateInChosenFormat(day, month, year);
                 } else System.out.println("The date is incorrect");
                 break;
             case 3:
+                System.out.println("Input the date dd mm");
                 day = input.nextInt();
                 month = input.nextInt();
                 defineDayOfWeekByDate(day, month, firstJan);
@@ -99,8 +99,7 @@ public class Main {
         return calendar;
     }
 
-    public static boolean checkingCorrectnessOfDate(int day, int month, int year) {
-        System.out.println("Input the date in format dd mm yyyy ");
+    public static boolean checkingCorrectnessOfDate(int day, int month) {
         boolean checkedDate = false;
         switch (month) {
             case 1:
@@ -338,8 +337,8 @@ public class Main {
             month = 12;
         }
 
+        int counter = 0;
         if (dayNumber != 0) {
-            int counter = 0;
             int date = 0;
             for (int i = 0; i < calendar[month - 1].length; i++) {
                 if (calendar[month - 1][i] == dayOfWeek) {
@@ -356,14 +355,14 @@ public class Main {
                     date = i + 1;
                 }
             }
-            System.out.println("dd/mm ->" + date + "/" + month);
+            if(counter == dayNumber)System.out.println("dd/mm ->" + date + "/" + month);
         } else {
             System.out.println("Wrong input!!!");
         }
+        if (counter != dayNumber) System.out.println("No such date");
     }
+
 }
-
-
 
 
 

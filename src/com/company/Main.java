@@ -59,6 +59,9 @@ public class Main {
                 defineDayOfWeekByDate(day, month, firstJan);
                 break;
             case 4:
+                System.out.println("Write the description of the date using only lower case: ");
+                String description = input.nextLine();
+                dateByDescription(description, firstJan);
                 break;
             case 5:
                 int[][] calendar = generatingCalendar(firstJan);
@@ -276,6 +279,87 @@ public class Main {
             day++;
         }
         System.out.println("");
+    }
+
+    public static void dateByDescription(String description, int firstJan) {
+        int dayNumber = 0, dayOfWeek = 0, month = 0;
+        int[][] calendar = generatingCalendar(firstJan);
+        if (description.contains("first")) {
+            dayNumber = 1;
+        } else if (description.contains("second")) {
+            dayNumber = 2;
+        } else if (description.contains("third")) {
+            dayNumber = 3;
+        } else if (description.contains("forth")) {
+            dayNumber = 4;
+        } else if (description.contains("fifth")) {
+            dayNumber = 5;
+        }
+
+        if (description.contains("monday")) {
+            dayOfWeek = 1;
+        } else if (description.contains("tuesday")) {
+            dayOfWeek = 2;
+        } else if (description.contains("wednesday")) {
+            dayOfWeek = 3;
+        } else if (description.contains("thursday")) {
+            dayOfWeek = 4;
+        } else if (description.contains("friday")) {
+            dayOfWeek = 5;
+        } else if (description.contains("saturday")) {
+            dayOfWeek = 6;
+        } else if (description.contains("sunday")) {
+            dayOfWeek = 7;
+        }
+
+        if (description.contains("january")) {
+            month = 1;
+        } else if (description.contains("february")) {
+            month = 2;
+        } else if (description.contains("march")) {
+            month = 3;
+        } else if (description.contains("april")) {
+            month = 4;
+        } else if (description.contains("may")) {
+            month = 5;
+        } else if (description.contains("june")) {
+            month = 6;
+        } else if (description.contains("july")) {
+            month = 7;
+        } else if (description.contains("august")) {
+            month = 8;
+        } else if (description.contains("september")) {
+            month = 9;
+        } else if (description.contains("october")) {
+            month = 10;
+        } else if (description.contains("november")) {
+            month = 11;
+        } else if (description.contains("december")) {
+            month = 12;
+        }
+
+        if (dayNumber != 0) {
+            int counter = 0;
+            int date = 0;
+            for (int i = 0; i < calendar[month - 1].length; i++) {
+                if (calendar[month - 1][i] == dayOfWeek) {
+                    date = i + 1;
+                    counter++;
+                }
+                if (counter == dayNumber) break;
+            }
+            System.out.println("dd/mm ->" + date + "/" + month);
+        } else if (description.contains("last")) {
+            int date = 0;
+            for (int i = 0; i < calendar[month - 1].length; i++) {
+                if (calendar[month - 1][i] == dayOfWeek) {
+                    date = i + 1;
+                }
+            }
+            System.out.println("dd/mm ->" + date + "/" + month);
+        } else {
+            System.out.println("Wrong input!!!");
+        }
     }
 }
 
